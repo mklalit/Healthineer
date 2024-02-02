@@ -1,0 +1,22 @@
+.button-container {
+    text-align: right;
+
+    button {
+        margin-right: 1rem;
+    }
+}
+
+form .row {
+    margin: 1rem 0;
+}
+
+
+thead th {
+    background-color: #6dc476;
+    color: white;
+}
+
+.table-striped>tbody>tr:nth-child(2n+1)>td,
+.table-striped>tbody>tr:nth-child(2n+1)>th {
+    background-color: #cceacf;
+}

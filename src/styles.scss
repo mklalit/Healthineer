@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+.active {
+    background-color: orange;
+}
+
+.error {
+    color: red;
+}
+
+
+.button-container {
+    text-align: right;
+
+    button {
+        margin-right: 1rem;
+    }
+}
+
+form .row {
+    margin: 1rem 0;
+}
+
+
+thead th {
+    background-color: #6dc476 !important;
+    color: white;
+}
+
+.table-striped>tbody>tr:nth-child(2n+1)>td,
+.table-striped>tbody>tr:nth-child(2n+1)>th {
+    background-color: #cceacf;
+}

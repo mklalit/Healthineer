@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+                    <div class="row ">
+                        <div class="col">
+                            <input formControlName="physicianName" type="text" class="form-control"
+                                placeholder="Physician Name" aria-label="Physician Name">
+                            <div class="error" *ngIf="!myForm.controls['physicianName']?.valid && (myForm.controls['physicianName']?.dirty
+                                    ||myForm.controls['physicianName']?.touched)">
+                                Physician Name is required !!
+                            </div>
+                        </div>
+                        <div class="col">
+                            <input formControlName="age" type="number" class="form-control" placeholder="Age"
+                                aria-label="Age">
+                            <div class="error" *ngIf="!myForm.controls['age']?.valid && (myForm.controls['age']?.dirty
+                                    ||myForm.controls['age']?.touched)">
+                                Age is required !!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col">
+                            <select formControlName="specialization" class="form-select" aria-label>
+                                <option value="">Specialization </option>
+                                <option value="generalMedicine">General Medicine</option>
+                                <option value="generalPhysician">General Physician</option>
+                                <option value="pediatrics">Pediatrics </option>
+                            </select>
+                            <div class="error" *ngIf="!myForm.controls['specialization']?.valid && (myForm.controls['specialization']?.dirty
+                            ||myForm.controls['specialization']?.touched)">
+                                Specialization is required !!
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input formControlName="gender" class="form-check-input" type="radio" name="gender"
+                                    id="inlineRadio1" value="male">
+                                <label class="form-check-label" for="inlineRadio1">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input formControlName="gender" class="form-check-input" type="radio" name="gender"
+                                    id="inlineRadio2" value="female">
+                                <label class="form-check-label" for="inlineRadio2">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input formControlName="gender" class="form-check-input" type="radio" name="gender"
+                                    id="inlineRadio3" value="other">
+                                <label class="form-check-label" for="inlineRadio3">Others</label>
+                            </div>
+                            <div class="error" *ngIf="!myForm.controls['gender']?.valid && (myForm.controls['gender']?.dirty
+                            ||myForm.controls['gender']?.touched)">
+                                Gender is required !!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-6">
+                            <input formControlName="qualification" type="text" class="form-control"
+                                placeholder="Qualification Name" aria-label="Qualification Name">
+
+                            <div class="error" *ngIf="!myForm.controls['qualification']?.valid && (myForm.controls['qualification']?.dirty
+                                ||myForm.controls['qualification']?.touched)">
+                                Qualification Name is required !!
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row ">
+                        <div class="col button-container" style="text-align: right;">
+                            <button [disabled]="!myForm.valid" type="submit" class="btn-warning btn"
+                                [innerText]="btnText"></button>
+                            <button type="button" (click)="resetForm()" class="btn-light btn">Reset</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+
+                            <th scope="col">Physician Name</th>
+                            <th scope="col">Specialization</th>
+                            <th scope="col">Prescribe Tests</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr (click)="setForm(physician,'edit')" *ngFor="let physician of allPhysician">
+                            <td>{{physician.physicianName}}</td>
+                            <td>{{physician.specialization}}</td>
+                            <td>{{physician.qualification}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

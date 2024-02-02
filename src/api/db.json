@@ -1,0 +1,46 @@
+{
+  "consultation": [
+    {
+      "patientName": "Lalit",
+      "age": 12,
+      "physicianName": "Raj",
+      "gender": "female",
+      "prescribedTest": "Chemistry",
+      "id": 2
+    },
+    {
+      "patientName": "Adam",
+      "age": 56,
+      "physicianName": "Raj",
+      "gender": "female",
+      "prescribedTest": "RTC",
+      "id": 4
+    }
+  ],
+  "physicians": [
+    {
+      "physicianName": "Raj",
+      "age": 35,
+      "specialization": "generalMedicine",
+      "gender": "female",
+      "qualification": "MBBS",
+      "id": 1
+    },
+    {
+      "physicianName": "Lalit",
+      "age": 56,
+      "specialization": "generalMedicine",
+      "gender": "male",
+      "qualification": "BDS",
+      "id": 2
+    },
+    {
+      "physicianName": "Lily",
+      "age": 29,
+      "specialization": "generalMedicine",
+      "gender": "female",
+      "qualification": "MBBS",
+      "id": 3
+    }
+  ]
+}
