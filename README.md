@@ -2,7 +2,7 @@
 
 
 
-1 Open the project in CMD , do NPM install.
+1 Clone the projec , do NPM install.
 
 # 
 2 To run the Server Please enter npm run server command
